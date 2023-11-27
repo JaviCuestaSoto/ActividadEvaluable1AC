@@ -243,6 +243,7 @@ public class GestorDB implements DataB {
             while (rs.next()) {
                 int idProducto = rs.getInt(ID);
                 insertarProductosFavoritos(idProducto);
+                System.out.println("Productos añadidos con éxito.");
             }
         } catch (RuntimeException | SQLException e) {
             throw new RuntimeException(e);
